@@ -1,0 +1,306 @@
+Make,Model,Year,Engine Fuel Type,Engine HP,Engine Cylinders,Transmission Type,Driven_Wheels,Number of Doors,Market Category,Vehicle Size,Vehicle Style,highway MPG,city mpg,Popularity,MSRP
+BMW,Sedan,2010,diesel,333,5,AUTOMATIC,all wheel drive,4,Performance,Large,Sedan,10,14,1186,116141
+Ford,SUV,2015,diesel,373,10,MANUAL,front wheel drive,2,Luxury,Compact,Sedan,21,13,3510,65735
+Audi,Sedan,2017,regular unleaded,184,4,MANUAL,all wheel drive,4,Luxury,Compact,Coupe,19,13,1663,36196
+Ford,Hatchback,2010,regular unleaded,114,8,AUTOMATIC,front wheel drive,2,Crossover,Compact,Coupe,13,11,3029,69167
+Mercedes-Benz,Convertible,2011,premium unleaded,89,3,AUTOMATIC,all wheel drive,4,Luxury,Large,Coupe,22,11,1733,50042
+Chevrolet,Truck,2010,regular unleaded,195,10,MANUAL,rear wheel drive,2,Hybrid,Midsize,Coupe,40,31,4429,55574
+Chevrolet,Sedan,2021,regular unleaded,234,12,AUTOMATIC,front wheel drive,2,Luxury,Compact,Coupe,30,35,3867,49776
+Nissan,Coupe,2019,diesel,369,4,AUTOMATIC,rear wheel drive,4,Hybrid,Midsize,Sedan,34,25,4722,80428
+Mercedes-Benz,SUV,2012,premium unleaded,304,10,AUTOMATIC,front wheel drive,2,Crossover,Midsize,Convertible,40,15,3920,116072
+Honda,Truck,2010,diesel,428,10,MANUAL,all wheel drive,4,Factory Tuner,Midsize,SUV,25,32,3294,64971
+Hyundai,Convertible,2013,regular unleaded,89,3,MANUAL,all wheel drive,4,Performance,Large,SUV,33,31,4259,113164
+Audi,Truck,2019,premium unleaded,138,5,MANUAL,rear wheel drive,2,Luxury,Compact,Coupe,25,16,1952,91146
+Chevrolet,Hatchback,2020,regular unleaded,485,4,AUTOMATIC,rear wheel drive,2,Crossover,Large,Sedan,15,9,4593,46374
+Nissan,SUV,2020,diesel,201,8,AUTOMATIC,front wheel drive,2,Hybrid,Midsize,Convertible,35,10,3733,113332
+Kia,Hatchback,2020,regular unleaded,218,5,AUTOMATIC,front wheel drive,4,Factory Tuner,Midsize,Sedan,21,17,2975,99954
+Honda,Coupe,2025,regular unleaded,286,6,AUTOMATIC,rear wheel drive,2,Crossover,Compact,SUV,16,13,2550,71524
+BMW,Sedan,2021,diesel,223,12,MANUAL,rear wheel drive,2,Luxury,Compact,Coupe,27,20,1971,41261
+Audi,Coupe,2019,premium unleaded,358,3,AUTOMATIC,rear wheel drive,2,Crossover,Large,Coupe,17,16,2452,51327
+Nissan,Sedan,2013,premium unleaded,493,12,MANUAL,all wheel drive,2,Luxury,Large,Coupe,22,34,2214,33758
+Honda,Convertible,2020,premium unleaded,437,5,MANUAL,rear wheel drive,4,Hybrid,Midsize,Sedan,17,8,4133,74994
+BMW,Sedan,2012,diesel,357,4,AUTOMATIC,front wheel drive,4,Factory Tuner,Large,SUV,11,13,4060,75031
+Honda,Coupe,2016,premium unleaded,203,6,MANUAL,all wheel drive,4,Factory Tuner,Midsize,Convertible,28,9,4184,52261
+Honda,Truck,2015,premium unleaded,157,6,AUTOMATIC,all wheel drive,4,Luxury,Large,Coupe,35,35,1641,110985
+Honda,Convertible,2016,premium unleaded,290,12,AUTOMATIC,all wheel drive,4,Crossover,Large,Convertible,10,33,2855,18415
+Nissan,Coupe,2023,regular unleaded,295,12,AUTOMATIC,all wheel drive,2,Factory Tuner,Large,Convertible,20,30,2771,21132
+Audi,Hatchback,2013,regular unleaded,185,4,AUTOMATIC,front wheel drive,2,Performance,Compact,Sedan,22,25,3821,95086
+Ford,Convertible,2021,diesel,254,8,AUTOMATIC,rear wheel drive,4,Performance,Compact,Coupe,33,21,3104,105651
+Mercedes-Benz,Truck,2016,diesel,132,12,AUTOMATIC,all wheel drive,4,Performance,Compact,Sedan,12,11,1332,14524
+Hyundai,Convertible,2016,premium unleaded,257,10,AUTOMATIC,all wheel drive,4,Crossover,Large,Coupe,25,12,2840,42635
+Mercedes-Benz,Convertible,2011,premium unleaded,439,3,MANUAL,rear wheel drive,2,Performance,Large,Convertible,12,33,3254,98936
+BMW,Coupe,2012,premium unleaded,424,6,MANUAL,rear wheel drive,2,Luxury,Large,Sedan,26,20,4656,20416
+Honda,Sedan,2022,premium unleaded,379,8,AUTOMATIC,rear wheel drive,2,Luxury,Midsize,Convertible,30,31,4241,89381
+Audi,Sedan,2016,premium unleaded,241,10,AUTOMATIC,rear wheel drive,2,Hybrid,Large,Coupe,39,33,1941,100086
+Kia,SUV,2013,diesel,172,12,AUTOMATIC,all wheel drive,4,Crossover,Large,Convertible,12,29,2437,62563
+Honda,Truck,2023,diesel,442,3,MANUAL,front wheel drive,2,Hybrid,Large,Sedan,31,31,2562,116558
+Audi,Hatchback,2024,diesel,271,5,MANUAL,all wheel drive,2,Factory Tuner,Large,Sedan,36,20,1055,83326
+Mercedes-Benz,Coupe,2023,premium unleaded,275,10,AUTOMATIC,all wheel drive,4,Hybrid,Compact,Sedan,31,9,1480,19927
+Mercedes-Benz,Convertible,2013,diesel,303,5,AUTOMATIC,all wheel drive,4,Hybrid,Midsize,Sedan,26,12,2065,67479
+BMW,Truck,2012,diesel,194,10,AUTOMATIC,front wheel drive,2,Factory Tuner,Compact,SUV,13,28,3028,60436
+BMW,Hatchback,2014,premium unleaded,297,3,MANUAL,front wheel drive,4,Hybrid,Midsize,Convertible,36,26,3339,45685
+Ford,Coupe,2012,regular unleaded,404,3,AUTOMATIC,rear wheel drive,2,Hybrid,Compact,Coupe,16,19,4727,85540
+Mercedes-Benz,Coupe,2024,regular unleaded,470,5,MANUAL,front wheel drive,4,Performance,Compact,Sedan,24,20,1192,79496
+Honda,Truck,2015,diesel,385,4,AUTOMATIC,rear wheel drive,4,Hybrid,Compact,Convertible,38,11,1158,94225
+Hyundai,SUV,2010,regular unleaded,334,6,AUTOMATIC,rear wheel drive,2,Crossover,Compact,SUV,25,12,4176,112526
+BMW,Convertible,2021,regular unleaded,268,8,AUTOMATIC,all wheel drive,4,Crossover,Compact,Sedan,40,10,1336,96064
+Toyota,Hatchback,2014,premium unleaded,227,4,MANUAL,front wheel drive,2,Performance,Compact,Convertible,16,15,2513,15219
+BMW,Hatchback,2020,regular unleaded,208,12,AUTOMATIC,front wheel drive,4,Factory Tuner,Compact,Convertible,10,9,2145,44774
+Mercedes-Benz,Hatchback,2013,regular unleaded,318,3,MANUAL,all wheel drive,2,Performance,Compact,Sedan,40,14,3821,74110
+Honda,Truck,2011,premium unleaded,129,3,AUTOMATIC,front wheel drive,2,Luxury,Compact,SUV,27,12,1131,18497
+Kia,Hatchback,2013,premium unleaded,309,8,MANUAL,all wheel drive,4,Performance,Compact,Convertible,26,16,2514,109432
+Nissan,Truck,2012,regular unleaded,415,6,AUTOMATIC,all wheel drive,2,Hybrid,Midsize,Coupe,12,26,4773,49730
+Honda,Convertible,2011,premium unleaded,315,4,AUTOMATIC,all wheel drive,2,Luxury,Midsize,SUV,28,33,2606,84243
+Mercedes-Benz,Convertible,2022,regular unleaded,204,12,AUTOMATIC,front wheel drive,2,Performance,Midsize,Coupe,26,18,3016,104331
+Honda,Coupe,2012,regular unleaded,272,5,AUTOMATIC,rear wheel drive,2,Crossover,Large,SUV,27,25,3705,100537
+Toyota,Coupe,2021,premium unleaded,217,10,MANUAL,rear wheel drive,2,Hybrid,Large,Sedan,12,28,2327,92392
+Ford,Coupe,2017,premium unleaded,181,3,MANUAL,rear wheel drive,2,Luxury,Midsize,Coupe,25,14,2575,76954
+BMW,Truck,2024,diesel,120,3,AUTOMATIC,front wheel drive,4,Factory Tuner,Large,Convertible,10,10,3821,81291
+Chevrolet,Convertible,2021,diesel,336,8,MANUAL,rear wheel drive,4,Performance,Midsize,Coupe,17,29,1609,32909
+Kia,Truck,2016,diesel,140,12,MANUAL,all wheel drive,4,Crossover,Compact,Coupe,30,27,1191,61446
+Audi,SUV,2010,regular unleaded,272,3,AUTOMATIC,front wheel drive,2,Hybrid,Compact,Sedan,31,30,2823,27115
+Honda,Sedan,2023,regular unleaded,462,5,AUTOMATIC,front wheel drive,2,Hybrid,Midsize,Convertible,25,21,1216,35283
+Nissan,Convertible,2011,premium unleaded,322,8,AUTOMATIC,all wheel drive,2,Hybrid,Large,SUV,23,35,2667,29034
+Chevrolet,Hatchback,2014,diesel,344,8,MANUAL,front wheel drive,2,Crossover,Large,Coupe,37,15,1232,28223
+Toyota,Hatchback,2012,regular unleaded,142,4,AUTOMATIC,front wheel drive,4,Hybrid,Large,SUV,35,31,1323,76884
+Nissan,Convertible,2018,premium unleaded,391,4,AUTOMATIC,front wheel drive,2,Factory Tuner,Midsize,Coupe,20,23,1205,42199
+Audi,Coupe,2015,diesel,229,5,MANUAL,all wheel drive,2,Crossover,Midsize,Sedan,17,10,1678,74070
+Toyota,Convertible,2020,premium unleaded,97,3,MANUAL,rear wheel drive,4,Crossover,Midsize,Convertible,17,26,3148,56932
+Ford,Sedan,2020,premium unleaded,463,4,AUTOMATIC,front wheel drive,2,Crossover,Compact,Coupe,27,20,4968,109069
+Ford,Hatchback,2021,regular unleaded,193,12,MANUAL,rear wheel drive,4,Crossover,Compact,Coupe,28,17,2301,15354
+Hyundai,SUV,2014,premium unleaded,469,8,MANUAL,all wheel drive,2,Performance,Large,SUV,21,20,3284,119261
+Ford,Sedan,2014,diesel,271,6,AUTOMATIC,all wheel drive,4,Crossover,Compact,SUV,36,30,2486,50569
+Kia,Sedan,2020,premium unleaded,130,12,AUTOMATIC,all wheel drive,2,Factory Tuner,Large,Convertible,17,21,1049,114249
+Nissan,SUV,2023,diesel,181,10,MANUAL,front wheel drive,4,Luxury,Large,Coupe,27,30,3549,50680
+Nissan,Convertible,2021,regular unleaded,499,10,AUTOMATIC,front wheel drive,4,Factory Tuner,Midsize,SUV,18,30,4210,87873
+BMW,SUV,2015,regular unleaded,96,6,MANUAL,front wheel drive,4,Crossover,Compact,Coupe,26,26,3373,76628
+Kia,Truck,2011,diesel,207,8,AUTOMATIC,front wheel drive,2,Factory Tuner,Large,SUV,36,12,1266,91977
+BMW,Coupe,2010,regular unleaded,180,3,MANUAL,rear wheel drive,4,Luxury,Midsize,SUV,37,15,1117,29429
+Audi,Coupe,2013,diesel,405,12,MANUAL,rear wheel drive,2,Factory Tuner,Midsize,Sedan,36,25,4446,92896
+Ford,Convertible,2024,regular unleaded,188,3,AUTOMATIC,rear wheel drive,2,Crossover,Large,SUV,33,17,2287,27097
+Honda,Sedan,2025,diesel,373,10,AUTOMATIC,front wheel drive,4,Hybrid,Midsize,Sedan,24,26,4068,67498
+Chevrolet,Truck,2016,diesel,201,8,MANUAL,front wheel drive,4,Performance,Large,Sedan,32,21,4092,87939
+Audi,Coupe,2013,regular unleaded,100,5,AUTOMATIC,all wheel drive,4,Luxury,Compact,Coupe,28,34,2274,22982
+Kia,Sedan,2021,regular unleaded,350,6,AUTOMATIC,rear wheel drive,4,Crossover,Midsize,Sedan,15,12,4233,57027
+Honda,SUV,2022,regular unleaded,96,10,MANUAL,rear wheel drive,4,Performance,Large,Sedan,20,16,1092,117976
+Hyundai,Hatchback,2018,regular unleaded,419,12,AUTOMATIC,front wheel drive,4,Factory Tuner,Midsize,Sedan,10,22,2123,31181
+Chevrolet,Hatchback,2023,premium unleaded,156,4,AUTOMATIC,all wheel drive,4,Hybrid,Large,Sedan,18,34,2860,46325
+Audi,Sedan,2020,diesel,237,5,MANUAL,all wheel drive,2,Luxury,Midsize,Coupe,31,35,1572,58964
+Nissan,Truck,2023,regular unleaded,403,12,AUTOMATIC,rear wheel drive,2,Crossover,Compact,SUV,11,29,4725,88134
+Nissan,Truck,2016,diesel,100,12,MANUAL,all wheel drive,2,Performance,Midsize,Coupe,28,25,2803,114430
+BMW,Coupe,2015,premium unleaded,377,4,AUTOMATIC,front wheel drive,2,Luxury,Midsize,Sedan,12,26,4429,73179
+Honda,Convertible,2012,premium unleaded,95,3,MANUAL,front wheel drive,4,Performance,Compact,SUV,29,33,4886,90306
+Mercedes-Benz,SUV,2016,premium unleaded,319,10,AUTOMATIC,all wheel drive,4,Performance,Midsize,Convertible,11,23,3261,112415
+Toyota,SUV,2019,premium unleaded,237,4,MANUAL,all wheel drive,4,Factory Tuner,Large,SUV,12,34,2244,64826
+Nissan,Hatchback,2016,regular unleaded,126,5,AUTOMATIC,rear wheel drive,2,Crossover,Large,Convertible,15,27,1725,96298
+Chevrolet,Coupe,2018,regular unleaded,497,8,MANUAL,rear wheel drive,2,Hybrid,Compact,Convertible,25,30,4863,78691
+Nissan,Truck,2020,diesel,277,6,MANUAL,rear wheel drive,4,Crossover,Compact,Coupe,22,26,2267,29274
+Ford,SUV,2018,premium unleaded,335,10,AUTOMATIC,rear wheel drive,4,Performance,Compact,SUV,24,12,3264,40915
+Kia,Sedan,2015,regular unleaded,93,12,AUTOMATIC,all wheel drive,4,Crossover,Compact,Coupe,26,34,1472,104083
+Honda,SUV,2024,premium unleaded,111,8,MANUAL,rear wheel drive,2,Luxury,Large,Coupe,18,12,3952,79472
+BMW,Convertible,2023,diesel,191,6,AUTOMATIC,rear wheel drive,2,Performance,Midsize,Sedan,32,12,3241,106524
+Toyota,Hatchback,2013,regular unleaded,94,10,MANUAL,front wheel drive,4,Hybrid,Large,SUV,10,34,3277,77742
+Kia,Convertible,2021,diesel,114,3,AUTOMATIC,all wheel drive,2,Performance,Compact,Coupe,36,29,2441,104927
+Kia,Coupe,2014,regular unleaded,496,4,AUTOMATIC,all wheel drive,4,Crossover,Compact,Sedan,40,12,2356,64863
+Toyota,Coupe,2019,diesel,299,5,MANUAL,rear wheel drive,2,Factory Tuner,Compact,Sedan,35,27,4977,100703
+BMW,Hatchback,2020,regular unleaded,332,4,AUTOMATIC,front wheel drive,4,Factory Tuner,Compact,SUV,35,16,4998,17306
+Ford,Convertible,2015,regular unleaded,114,6,AUTOMATIC,all wheel drive,2,Performance,Compact,SUV,16,24,2573,110824
+Toyota,Convertible,2016,diesel,261,4,AUTOMATIC,front wheel drive,4,Crossover,Large,Sedan,33,35,4813,30613
+Ford,Hatchback,2013,premium unleaded,454,4,MANUAL,all wheel drive,4,Hybrid,Compact,Convertible,22,19,3352,55511
+Toyota,Truck,2015,premium unleaded,188,8,AUTOMATIC,front wheel drive,4,Luxury,Large,Sedan,21,23,3101,84218
+Toyota,Convertible,2024,regular unleaded,258,5,MANUAL,all wheel drive,2,Crossover,Large,Coupe,16,29,3192,15760
+Nissan,Convertible,2018,regular unleaded,301,8,MANUAL,all wheel drive,2,Luxury,Large,SUV,25,30,2028,105428
+Honda,Hatchback,2025,diesel,135,3,MANUAL,all wheel drive,2,Crossover,Midsize,Convertible,33,17,2069,39864
+Chevrolet,SUV,2024,regular unleaded,151,12,MANUAL,front wheel drive,4,Crossover,Midsize,SUV,16,34,2961,117720
+BMW,Coupe,2020,regular unleaded,416,6,MANUAL,rear wheel drive,2,Hybrid,Midsize,Sedan,19,20,3981,14612
+Audi,Convertible,2013,premium unleaded,96,4,AUTOMATIC,all wheel drive,2,Performance,Large,Convertible,15,16,2328,23563
+BMW,SUV,2023,premium unleaded,96,6,AUTOMATIC,rear wheel drive,2,Performance,Compact,SUV,30,32,1834,58589
+Ford,Truck,2018,regular unleaded,128,4,AUTOMATIC,rear wheel drive,2,Luxury,Compact,Sedan,19,30,1876,47936
+Mercedes-Benz,Convertible,2010,regular unleaded,308,8,AUTOMATIC,all wheel drive,2,Factory Tuner,Large,Sedan,40,26,2165,97208
+Nissan,Truck,2011,regular unleaded,260,10,MANUAL,all wheel drive,2,Luxury,Midsize,Sedan,22,34,1599,13561
+Nissan,Hatchback,2021,regular unleaded,411,5,AUTOMATIC,rear wheel drive,2,Performance,Large,Sedan,13,16,3296,59061
+Kia,Coupe,2016,premium unleaded,269,5,AUTOMATIC,all wheel drive,4,Crossover,Midsize,Sedan,13,34,1946,28082
+BMW,Coupe,2019,premium unleaded,190,10,AUTOMATIC,all wheel drive,4,Hybrid,Large,SUV,13,17,4209,58322
+Kia,Hatchback,2025,premium unleaded,400,12,AUTOMATIC,front wheel drive,2,Performance,Midsize,SUV,14,13,3540,42532
+Toyota,Coupe,2011,diesel,273,5,AUTOMATIC,all wheel drive,4,Performance,Large,Coupe,31,8,3427,88757
+Toyota,Coupe,2015,diesel,218,4,AUTOMATIC,front wheel drive,2,Crossover,Large,Convertible,12,34,2461,88093
+Chevrolet,Convertible,2025,premium unleaded,149,5,MANUAL,front wheel drive,2,Crossover,Compact,Coupe,27,12,4654,36063
+Ford,Sedan,2014,regular unleaded,383,6,AUTOMATIC,all wheel drive,2,Crossover,Large,SUV,30,34,2611,36174
+Mercedes-Benz,Convertible,2010,diesel,236,10,AUTOMATIC,rear wheel drive,2,Factory Tuner,Large,Sedan,30,14,2302,16126
+BMW,Convertible,2014,regular unleaded,319,6,AUTOMATIC,all wheel drive,4,Hybrid,Compact,Convertible,31,35,2444,82407
+Honda,Coupe,2012,diesel,256,3,AUTOMATIC,rear wheel drive,2,Luxury,Large,SUV,21,25,2106,48479
+Ford,Hatchback,2021,diesel,171,4,MANUAL,rear wheel drive,2,Crossover,Midsize,Convertible,29,33,4386,43587
+Honda,Coupe,2017,diesel,244,12,MANUAL,rear wheel drive,4,Performance,Compact,Sedan,15,28,3724,71460
+Nissan,Coupe,2017,premium unleaded,181,10,AUTOMATIC,rear wheel drive,4,Luxury,Compact,SUV,14,31,4456,35753
+Hyundai,Hatchback,2025,diesel,345,12,AUTOMATIC,all wheel drive,2,Factory Tuner,Compact,Coupe,12,14,4916,119034
+Kia,Sedan,2023,premium unleaded,315,8,MANUAL,front wheel drive,4,Performance,Large,Sedan,29,31,3163,58931
+Honda,SUV,2018,premium unleaded,173,4,AUTOMATIC,rear wheel drive,2,Crossover,Compact,Sedan,13,19,4172,12473
+Kia,Truck,2017,premium unleaded,108,4,MANUAL,front wheel drive,2,Hybrid,Large,Convertible,28,19,1435,66473
+Hyundai,SUV,2016,premium unleaded,199,4,MANUAL,rear wheel drive,4,Factory Tuner,Midsize,Convertible,31,30,3666,11114
+Ford,Coupe,2015,diesel,330,12,MANUAL,front wheel drive,2,Crossover,Midsize,Sedan,25,14,2463,99192
+Kia,Sedan,2012,regular unleaded,200,4,AUTOMATIC,all wheel drive,4,Factory Tuner,Compact,SUV,36,31,2372,107277
+Toyota,SUV,2022,premium unleaded,311,6,MANUAL,rear wheel drive,4,Crossover,Compact,Coupe,24,27,1938,48182
+Mercedes-Benz,Hatchback,2019,diesel,131,5,AUTOMATIC,all wheel drive,2,Luxury,Midsize,Coupe,40,16,4206,16372
+Nissan,SUV,2015,regular unleaded,73,8,MANUAL,rear wheel drive,2,Performance,Midsize,SUV,34,33,2164,12644
+Mercedes-Benz,Truck,2023,regular unleaded,158,8,AUTOMATIC,front wheel drive,2,Performance,Compact,SUV,24,23,2703,63596
+Nissan,Coupe,2012,regular unleaded,375,8,AUTOMATIC,all wheel drive,2,Performance,Large,Convertible,23,35,1605,117907
+Ford,SUV,2022,diesel,474,8,MANUAL,rear wheel drive,4,Crossover,Compact,Coupe,31,27,1055,23824
+Toyota,Hatchback,2015,regular unleaded,107,6,AUTOMATIC,all wheel drive,4,Luxury,Large,Convertible,27,26,3378,47674
+Ford,Hatchback,2025,diesel,450,12,MANUAL,front wheel drive,2,Crossover,Large,Sedan,23,14,4653,87336
+Honda,Truck,2018,premium unleaded,155,3,MANUAL,all wheel drive,4,Luxury,Compact,Sedan,39,18,1675,119714
+BMW,Sedan,2018,diesel,376,12,MANUAL,rear wheel drive,2,Crossover,Large,SUV,25,19,4716,85060
+Kia,SUV,2018,regular unleaded,366,3,MANUAL,all wheel drive,2,Performance,Large,SUV,34,23,2113,37336
+Nissan,Hatchback,2016,diesel,376,6,MANUAL,front wheel drive,2,Luxury,Midsize,Convertible,22,13,1573,77729
+Chevrolet,Truck,2013,premium unleaded,142,3,AUTOMATIC,all wheel drive,2,Luxury,Midsize,SUV,23,24,2999,103234
+Chevrolet,Convertible,2022,premium unleaded,290,3,AUTOMATIC,front wheel drive,2,Performance,Midsize,Coupe,39,9,4795,11775
+Ford,Truck,2024,premium unleaded,420,12,AUTOMATIC,rear wheel drive,2,Performance,Midsize,SUV,35,19,3812,26832
+Ford,Convertible,2013,regular unleaded,185,10,AUTOMATIC,front wheel drive,4,Crossover,Compact,Convertible,14,31,4924,96069
+Toyota,Truck,2016,premium unleaded,333,8,MANUAL,front wheel drive,4,Performance,Large,Sedan,10,19,2673,13208
+Hyundai,Hatchback,2024,diesel,169,12,AUTOMATIC,all wheel drive,2,Luxury,Large,SUV,29,18,1852,53014
+Mercedes-Benz,Coupe,2020,diesel,304,3,MANUAL,front wheel drive,4,Crossover,Compact,SUV,39,23,1796,51598
+Honda,SUV,2014,premium unleaded,328,12,AUTOMATIC,all wheel drive,2,Luxury,Large,Sedan,18,25,3914,88621
+Honda,SUV,2010,premium unleaded,347,6,AUTOMATIC,all wheel drive,2,Factory Tuner,Compact,Coupe,10,11,4781,20473
+Honda,Truck,2025,regular unleaded,333,8,AUTOMATIC,rear wheel drive,4,Crossover,Compact,Sedan,22,14,1287,74287
+Toyota,Sedan,2019,regular unleaded,369,5,MANUAL,all wheel drive,2,Crossover,Compact,Convertible,23,26,1160,60172
+Mercedes-Benz,Convertible,2020,premium unleaded,490,6,MANUAL,front wheel drive,4,Factory Tuner,Midsize,Convertible,22,28,1366,78012
+Hyundai,Convertible,2017,regular unleaded,263,10,MANUAL,front wheel drive,2,Factory Tuner,Midsize,Sedan,36,15,4656,83108
+BMW,Hatchback,2015,regular unleaded,336,8,MANUAL,front wheel drive,2,Luxury,Midsize,SUV,15,17,4294,78801
+Audi,SUV,2021,diesel,353,5,MANUAL,front wheel drive,4,Performance,Compact,Coupe,17,10,2657,97476
+Mercedes-Benz,Truck,2018,premium unleaded,195,10,AUTOMATIC,rear wheel drive,2,Hybrid,Midsize,Convertible,14,19,1557,54397
+BMW,Coupe,2013,diesel,371,12,AUTOMATIC,all wheel drive,2,Factory Tuner,Midsize,SUV,12,23,4579,68908
+Hyundai,Sedan,2025,regular unleaded,487,8,AUTOMATIC,front wheel drive,4,Performance,Midsize,Convertible,22,29,2638,79618
+Mercedes-Benz,Convertible,2024,diesel,247,6,MANUAL,all wheel drive,4,Luxury,Midsize,Convertible,26,24,1008,116791
+Toyota,Coupe,2011,diesel,197,12,AUTOMATIC,rear wheel drive,4,Luxury,Compact,SUV,18,31,3244,44684
+BMW,SUV,2018,regular unleaded,409,4,AUTOMATIC,rear wheel drive,4,Luxury,Midsize,Sedan,20,11,1375,91669
+Audi,SUV,2020,premium unleaded,262,6,AUTOMATIC,rear wheel drive,2,Factory Tuner,Compact,Coupe,29,35,1972,12572
+Kia,Truck,2023,regular unleaded,256,4,MANUAL,front wheel drive,2,Hybrid,Midsize,Convertible,17,15,2034,101058
+Kia,Convertible,2014,regular unleaded,374,12,AUTOMATIC,all wheel drive,2,Performance,Compact,Sedan,29,26,1385,30137
+Kia,Hatchback,2014,premium unleaded,376,10,AUTOMATIC,front wheel drive,2,Hybrid,Large,Sedan,22,19,2918,91262
+Kia,Hatchback,2023,premium unleaded,227,3,MANUAL,all wheel drive,2,Performance,Large,Convertible,40,10,1383,29772
+Kia,Hatchback,2014,premium unleaded,229,6,AUTOMATIC,rear wheel drive,4,Luxury,Large,Coupe,34,29,2763,117961
+Audi,SUV,2013,premium unleaded,178,10,MANUAL,all wheel drive,4,Factory Tuner,Large,SUV,40,12,1554,39548
+Audi,Hatchback,2017,diesel,162,8,AUTOMATIC,front wheel drive,2,Luxury,Large,Coupe,38,18,2228,72173
+Nissan,Truck,2025,regular unleaded,253,3,AUTOMATIC,front wheel drive,4,Luxury,Midsize,Sedan,35,8,2945,26689
+Honda,Truck,2010,regular unleaded,453,10,AUTOMATIC,rear wheel drive,2,Factory Tuner,Midsize,SUV,40,30,2197,103176
+Toyota,Sedan,2016,diesel,411,5,MANUAL,all wheel drive,4,Crossover,Compact,Coupe,25,28,1832,41922
+Audi,Coupe,2018,regular unleaded,287,8,MANUAL,rear wheel drive,4,Hybrid,Compact,Convertible,28,14,2107,83514
+Ford,SUV,2018,regular unleaded,430,10,MANUAL,all wheel drive,4,Factory Tuner,Large,Convertible,26,11,2146,110190
+BMW,Hatchback,2016,diesel,193,4,AUTOMATIC,rear wheel drive,4,Crossover,Midsize,Coupe,22,35,3901,113754
+Toyota,Truck,2020,diesel,319,8,AUTOMATIC,rear wheel drive,4,Crossover,Compact,Sedan,25,34,1979,96773
+Ford,Truck,2025,regular unleaded,282,5,MANUAL,all wheel drive,4,Crossover,Compact,SUV,30,23,1949,60212
+Mercedes-Benz,Hatchback,2014,premium unleaded,304,10,AUTOMATIC,front wheel drive,4,Crossover,Compact,Sedan,22,12,1641,115079
+Ford,SUV,2022,diesel,251,8,AUTOMATIC,all wheel drive,4,Hybrid,Midsize,Sedan,25,20,3089,109832
+Hyundai,Sedan,2025,diesel,86,5,AUTOMATIC,rear wheel drive,2,Factory Tuner,Large,Convertible,32,29,4137,108503
+Toyota,SUV,2010,premium unleaded,449,12,MANUAL,front wheel drive,4,Crossover,Compact,Convertible,31,9,1479,52301
+Toyota,Sedan,2020,regular unleaded,237,3,MANUAL,rear wheel drive,4,Hybrid,Large,Convertible,40,25,1892,52007
+Ford,Convertible,2016,regular unleaded,421,5,MANUAL,rear wheel drive,2,Crossover,Midsize,SUV,20,34,1004,60960
+Ford,Coupe,2018,regular unleaded,452,5,AUTOMATIC,all wheel drive,4,Hybrid,Large,Convertible,21,25,1482,37215
+Audi,Coupe,2020,premium unleaded,176,12,MANUAL,front wheel drive,4,Hybrid,Large,Sedan,39,8,1646,31019
+Ford,Hatchback,2023,diesel,171,12,AUTOMATIC,rear wheel drive,4,Hybrid,Compact,Coupe,15,21,3047,68414
+Chevrolet,Convertible,2022,regular unleaded,187,3,AUTOMATIC,front wheel drive,4,Factory Tuner,Midsize,Coupe,36,28,1952,73399
+Toyota,Sedan,2019,diesel,147,6,AUTOMATIC,rear wheel drive,2,Factory Tuner,Midsize,SUV,21,22,4294,100829
+Chevrolet,SUV,2011,regular unleaded,169,8,MANUAL,rear wheel drive,4,Factory Tuner,Large,Sedan,16,26,1002,35167
+Chevrolet,Truck,2021,diesel,319,8,MANUAL,front wheel drive,2,Crossover,Compact,Convertible,10,19,1359,34683
+Ford,Hatchback,2018,regular unleaded,143,5,AUTOMATIC,front wheel drive,2,Crossover,Midsize,Sedan,40,20,3463,48448
+Toyota,Coupe,2011,premium unleaded,284,10,AUTOMATIC,front wheel drive,2,Luxury,Compact,SUV,21,24,2864,110538
+Hyundai,Sedan,2019,diesel,409,5,MANUAL,rear wheel drive,2,Factory Tuner,Large,Convertible,25,12,3603,50185
+Audi,Truck,2017,diesel,424,6,AUTOMATIC,all wheel drive,2,Factory Tuner,Midsize,Coupe,23,29,2374,99113
+Toyota,Convertible,2013,regular unleaded,443,5,MANUAL,rear wheel drive,2,Luxury,Compact,Convertible,14,17,2453,102845
+Kia,Truck,2023,diesel,206,10,AUTOMATIC,front wheel drive,4,Luxury,Compact,Sedan,37,10,3574,33385
+Chevrolet,Convertible,2025,diesel,498,8,AUTOMATIC,front wheel drive,4,Factory Tuner,Large,SUV,18,11,1629,15148
+Kia,Sedan,2024,premium unleaded,113,12,MANUAL,rear wheel drive,4,Luxury,Compact,Sedan,20,28,3286,117553
+Hyundai,Convertible,2023,regular unleaded,282,8,AUTOMATIC,all wheel drive,4,Performance,Compact,Convertible,32,12,3696,77237
+Ford,Convertible,2023,diesel,251,5,AUTOMATIC,all wheel drive,2,Hybrid,Compact,SUV,29,21,2932,73190
+BMW,Truck,2013,diesel,408,3,MANUAL,front wheel drive,4,Hybrid,Large,SUV,18,18,3318,45090
+Ford,Convertible,2024,regular unleaded,125,8,AUTOMATIC,all wheel drive,4,Hybrid,Midsize,Sedan,21,31,3249,115045
+Mercedes-Benz,Coupe,2011,premium unleaded,469,6,AUTOMATIC,front wheel drive,2,Hybrid,Midsize,SUV,13,33,4244,44091
+BMW,Hatchback,2018,premium unleaded,483,8,AUTOMATIC,front wheel drive,2,Crossover,Large,SUV,38,30,4651,47012
+BMW,Convertible,2018,premium unleaded,192,6,AUTOMATIC,front wheel drive,4,Hybrid,Large,Convertible,22,24,2968,87249
+Hyundai,Coupe,2025,diesel,336,4,MANUAL,front wheel drive,4,Performance,Compact,Sedan,14,8,2683,52441
+Nissan,Coupe,2020,regular unleaded,237,5,MANUAL,front wheel drive,2,Factory Tuner,Compact,Sedan,22,18,1335,43469
+BMW,Convertible,2025,regular unleaded,462,6,AUTOMATIC,all wheel drive,4,Crossover,Midsize,Convertible,34,35,4702,118981
+Honda,Sedan,2015,regular unleaded,183,4,AUTOMATIC,all wheel drive,2,Crossover,Compact,SUV,29,34,2934,79747
+Chevrolet,Hatchback,2018,premium unleaded,210,10,AUTOMATIC,rear wheel drive,4,Hybrid,Midsize,Convertible,34,33,4977,66933
+Hyundai,Convertible,2017,diesel,451,8,MANUAL,all wheel drive,4,Luxury,Large,Convertible,13,32,1483,111256
+Toyota,Truck,2017,diesel,469,8,MANUAL,all wheel drive,4,Performance,Compact,Sedan,20,21,3493,114253
+Kia,Hatchback,2025,regular unleaded,355,5,AUTOMATIC,front wheel drive,4,Hybrid,Large,Convertible,32,23,2093,40971
+Honda,Convertible,2022,diesel,86,5,MANUAL,front wheel drive,4,Crossover,Large,Sedan,30,17,3384,62854
+Honda,Coupe,2018,premium unleaded,101,4,AUTOMATIC,all wheel drive,2,Performance,Large,SUV,23,25,3780,39821
+Audi,SUV,2016,premium unleaded,120,8,MANUAL,front wheel drive,2,Luxury,Compact,Convertible,20,27,1860,24759
+Ford,Coupe,2010,diesel,200,10,AUTOMATIC,rear wheel drive,4,Performance,Compact,SUV,24,28,2343,89286
+Honda,SUV,2024,premium unleaded,450,10,AUTOMATIC,all wheel drive,4,Crossover,Midsize,Coupe,11,25,4940,90078
+Toyota,Truck,2024,premium unleaded,219,8,AUTOMATIC,rear wheel drive,2,Luxury,Large,Convertible,24,21,1023,17212
+Toyota,Convertible,2016,regular unleaded,341,5,AUTOMATIC,rear wheel drive,4,Luxury,Midsize,Sedan,26,16,2093,118120
+Ford,Truck,2025,diesel,182,8,MANUAL,front wheel drive,4,Factory Tuner,Compact,Convertible,14,24,3606,55265
+Hyundai,Coupe,2011,diesel,91,4,AUTOMATIC,rear wheel drive,2,Performance,Compact,SUV,16,33,1324,68588
+Ford,Convertible,2022,diesel,444,10,AUTOMATIC,rear wheel drive,2,Crossover,Midsize,SUV,31,19,2217,15442
+Hyundai,Convertible,2013,diesel,483,10,MANUAL,all wheel drive,2,Crossover,Compact,SUV,28,17,3470,30022
+BMW,Hatchback,2024,premium unleaded,316,3,MANUAL,front wheel drive,4,Crossover,Compact,Coupe,17,11,3863,14260
+Toyota,Coupe,2012,premium unleaded,448,12,MANUAL,rear wheel drive,4,Luxury,Midsize,Convertible,35,14,1637,18097
+BMW,Coupe,2024,premium unleaded,216,6,MANUAL,rear wheel drive,2,Performance,Compact,Coupe,22,33,1019,21564
+Mercedes-Benz,Coupe,2023,regular unleaded,263,10,MANUAL,all wheel drive,2,Luxury,Large,Convertible,18,13,2301,91507
+Ford,Coupe,2012,premium unleaded,333,5,MANUAL,all wheel drive,4,Luxury,Midsize,Convertible,39,11,3893,21140
+Audi,Coupe,2014,premium unleaded,410,5,AUTOMATIC,front wheel drive,2,Hybrid,Compact,Sedan,20,18,3045,105999
+Audi,Coupe,2021,regular unleaded,442,3,AUTOMATIC,all wheel drive,2,Factory Tuner,Midsize,SUV,25,17,3181,66272
+Audi,SUV,2019,regular unleaded,330,5,MANUAL,front wheel drive,4,Luxury,Large,Sedan,10,16,4354,117973
+Mercedes-Benz,SUV,2019,premium unleaded,175,4,MANUAL,all wheel drive,2,Performance,Compact,Convertible,31,10,2872,85344
+Nissan,Truck,2019,premium unleaded,179,10,MANUAL,all wheel drive,2,Performance,Midsize,Sedan,22,26,2888,20582
+Mercedes-Benz,Coupe,2017,regular unleaded,238,3,MANUAL,all wheel drive,2,Hybrid,Midsize,Sedan,14,19,2304,33454
+Ford,Sedan,2018,regular unleaded,476,10,AUTOMATIC,all wheel drive,4,Performance,Midsize,Convertible,14,18,1401,113725
+Mercedes-Benz,Sedan,2010,regular unleaded,95,4,AUTOMATIC,front wheel drive,2,Luxury,Midsize,SUV,32,27,1915,16663
+Mercedes-Benz,Sedan,2014,premium unleaded,328,3,AUTOMATIC,rear wheel drive,2,Performance,Large,SUV,15,31,1790,86025
+Chevrolet,Hatchback,2016,diesel,344,8,MANUAL,rear wheel drive,4,Crossover,Midsize,Sedan,25,21,4147,35147
+Chevrolet,Hatchback,2024,diesel,452,10,MANUAL,rear wheel drive,2,Performance,Midsize,Convertible,14,32,1387,26870
+BMW,Hatchback,2017,premium unleaded,300,10,MANUAL,all wheel drive,2,Hybrid,Compact,SUV,23,33,2952,79599
+Chevrolet,Hatchback,2024,regular unleaded,128,10,AUTOMATIC,all wheel drive,2,Performance,Large,Coupe,35,35,4497,65064
+Audi,Hatchback,2021,premium unleaded,355,10,MANUAL,front wheel drive,2,Hybrid,Compact,Convertible,17,28,1840,64740
+Honda,Hatchback,2022,premium unleaded,70,10,MANUAL,all wheel drive,4,Performance,Compact,Sedan,35,30,1274,68151
+Ford,SUV,2011,diesel,194,5,AUTOMATIC,all wheel drive,2,Hybrid,Midsize,Coupe,29,9,3466,37101
+Hyundai,Sedan,2018,regular unleaded,205,8,MANUAL,rear wheel drive,4,Hybrid,Large,Convertible,20,25,2573,11253
+Ford,SUV,2022,diesel,227,8,AUTOMATIC,all wheel drive,2,Performance,Midsize,Coupe,37,13,1939,75945
+Honda,Truck,2010,regular unleaded,199,6,AUTOMATIC,rear wheel drive,2,Factory Tuner,Compact,Sedan,36,26,3160,104914
+BMW,Sedan,2023,premium unleaded,497,4,AUTOMATIC,all wheel drive,2,Luxury,Compact,Coupe,25,14,3644,73779
+Chevrolet,Convertible,2013,regular unleaded,473,5,AUTOMATIC,all wheel drive,2,Crossover,Large,Convertible,11,17,2327,47020
+Ford,Truck,2016,regular unleaded,126,4,AUTOMATIC,front wheel drive,4,Luxury,Large,Coupe,19,26,2619,44783
+Chevrolet,Sedan,2016,diesel,273,4,AUTOMATIC,all wheel drive,2,Hybrid,Large,SUV,15,22,4389,103533
+BMW,SUV,2021,diesel,133,10,AUTOMATIC,front wheel drive,2,Luxury,Compact,Coupe,33,23,4010,24928
+Hyundai,Convertible,2010,premium unleaded,220,12,MANUAL,rear wheel drive,4,Crossover,Large,Convertible,27,23,4169,104990
+Hyundai,Hatchback,2017,premium unleaded,82,12,AUTOMATIC,rear wheel drive,4,Crossover,Large,Coupe,40,27,3282,76271
+Audi,Convertible,2015,premium unleaded,270,3,AUTOMATIC,all wheel drive,4,Factory Tuner,Large,Sedan,15,19,3135,49490
+BMW,Hatchback,2018,premium unleaded,458,8,AUTOMATIC,all wheel drive,2,Luxury,Large,Convertible,17,33,1838,39481
+Chevrolet,Truck,2015,regular unleaded,96,12,AUTOMATIC,rear wheel drive,2,Crossover,Compact,Sedan,35,16,4438,59151
+Honda,Convertible,2019,premium unleaded,195,10,MANUAL,rear wheel drive,4,Factory Tuner,Midsize,Convertible,16,22,1099,94774
+Chevrolet,Convertible,2010,regular unleaded,385,10,AUTOMATIC,all wheel drive,2,Hybrid,Compact,Sedan,34,22,2132,50954
+Hyundai,Truck,2020,premium unleaded,272,6,MANUAL,all wheel drive,2,Hybrid,Compact,SUV,32,25,4184,115184
+Ford,Coupe,2023,diesel,195,3,AUTOMATIC,front wheel drive,4,Hybrid,Midsize,SUV,16,35,1961,67418
+Honda,Sedan,2021,regular unleaded,326,10,AUTOMATIC,front wheel drive,4,Crossover,Compact,Sedan,33,19,3779,59902
+BMW,Sedan,2018,diesel,261,3,AUTOMATIC,all wheel drive,2,Performance,Large,SUV,27,17,3017,91948
+Honda,Truck,2010,regular unleaded,423,3,MANUAL,all wheel drive,2,Crossover,Midsize,Convertible,20,18,2043,60861
+Honda,SUV,2021,diesel,490,8,AUTOMATIC,front wheel drive,2,Hybrid,Midsize,Convertible,33,23,3726,91655
+Toyota,Convertible,2017,premium unleaded,313,5,MANUAL,all wheel drive,2,Hybrid,Large,Sedan,17,21,3618,75307
+Honda,Hatchback,2018,premium unleaded,207,10,AUTOMATIC,front wheel drive,2,Performance,Compact,SUV,23,30,4378,46489
+Hyundai,SUV,2021,regular unleaded,415,8,MANUAL,all wheel drive,4,Crossover,Midsize,Coupe,21,25,3481,13398
+Chevrolet,Truck,2024,regular unleaded,344,3,AUTOMATIC,all wheel drive,2,Hybrid,Compact,Coupe,27,25,3895,45728
+Mercedes-Benz,SUV,2020,diesel,410,3,AUTOMATIC,rear wheel drive,4,Hybrid,Midsize,SUV,25,12,4779,114780
+Honda,Truck,2012,premium unleaded,170,6,AUTOMATIC,all wheel drive,2,Factory Tuner,Midsize,Coupe,33,20,4346,28295
+Ford,Hatchback,2018,regular unleaded,388,6,AUTOMATIC,all wheel drive,4,Hybrid,Compact,Coupe,24,29,4815,18699
+Chevrolet,Truck,2016,diesel,266,3,MANUAL,all wheel drive,2,Factory Tuner,Large,SUV,20,14,2177,29469
+Toyota,Sedan,2014,regular unleaded,99,3,AUTOMATIC,all wheel drive,4,Crossover,Compact,Sedan,32,8,2817,86566
+Ford,Hatchback,2014,diesel,313,6,MANUAL,all wheel drive,4,Crossover,Compact,Sedan,25,24,1801,41661
+Audi,SUV,2019,diesel,232,6,MANUAL,rear wheel drive,2,Performance,Midsize,Coupe,15,25,2506,56342
+Mercedes-Benz,SUV,2012,regular unleaded,305,6,AUTOMATIC,all wheel drive,2,Crossover,Large,Convertible,31,22,4856,60683
+Hyundai,Hatchback,2011,premium unleaded,130,12,AUTOMATIC,rear wheel drive,2,Hybrid,Large,Coupe,22,34,2868,68497
+Kia,Sedan,2021,diesel,235,8,AUTOMATIC,all wheel drive,4,Performance,Compact,Sedan,10,22,2984,58685
+Chevrolet,Convertible,2025,regular unleaded,463,3,MANUAL,front wheel drive,4,Crossover,Midsize,Convertible,14,31,2035,90014
+Hyundai,Hatchback,2015,regular unleaded,93,6,MANUAL,rear wheel drive,4,Luxury,Compact,SUV,18,21,3449,57101
+Mercedes-Benz,Convertible,2022,premium unleaded,269,4,MANUAL,rear wheel drive,2,Luxury,Midsize,Coupe,14,28,3890,76514
+Hyundai,SUV,2020,diesel,221,3,MANUAL,all wheel drive,4,Luxury,Large,Coupe,20,16,4976,87265
+Hyundai,Sedan,2017,regular unleaded,204,10,AUTOMATIC,front wheel drive,2,Performance,Large,SUV,27,33,3900,36754
+Honda,Coupe,2025,diesel,243,3,MANUAL,rear wheel drive,4,Luxury,Compact,Sedan,15,26,2338,17814
+Toyota,Truck,2018,premium unleaded,232,12,AUTOMATIC,rear wheel drive,2,Crossover,Compact,Convertible,11,30,4189,65925
+Chevrolet,SUV,2023,regular unleaded,404,3,AUTOMATIC,all wheel drive,4,Hybrid,Large,Convertible,31,19,1249,34404
+Nissan,SUV,2020,diesel,201,8,AUTOMATIC,front wheel drive,2,Hybrid,Midsize,Convertible,35,10,3733,113332
+Honda,SUV,2021,diesel,490,8,AUTOMATIC,front wheel drive,2,Hybrid,Midsize,Convertible,33,23,3726,91655
+Toyota,Convertible,2017,premium unleaded,313,5,MANUAL,all wheel drive,2,Hybrid,Large,Sedan,17,21,3618,75307
+Honda,Hatchback,2018,premium unleaded,207,10,AUTOMATIC,front wheel drive,2,Performance,Compact,SUV,23,30,4378,46489
+Hyundai,SUV,2021,regular unleaded,415,8,MANUAL,all wheel drive,4,Crossover,Midsize,Coupe,21,25,3481,13398
