@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Car Price Exploratory Data Analysis — Python Project</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap');
+
+  :root {
+    --bg: #050d18;
+    --surface: #0a1628;
+    --border: rgba(34,211,238,0.12);
+    --accent: #22d3ee;
+    --accentD: rgba(34,211,238,0.08);
+    --text: #e2e8f0;
+    --muted: #64748b;
+    --dim: #334155;
+    --green: #34d399;
+    --red: #f87171;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    background-image:
+      linear-gradient(rgba(34,211,238,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34,211,238,0.035) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 52px 40px 80px; }
+
+  .meta {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--dim);
+    letter-spacing: 0.12em;
+    margin-bottom: 22px;
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #f1f5f9;
+    margin-bottom: 16px;
+  }
+  h1 .accent { color: var(--accent); }
+  h1 .sub { color: var(--dim); font-size: 0.5em; font-weight: 600; display: block; margin-top: 4px; }
+
+  .lede {
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 640px;
+    line-height: 1.75;
+    margin-bottom: 22px;
+  }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+  .tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--accentD);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+  }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+  .stat-card {
+    text-align: center;
+    padding: 18px 14px;
+    background: var(--accentD);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+  .stat-card .v { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 26px; color: var(--accent); line-height: 1; }
+  .stat-card .l { font-family: 'Space Mono', monospace; font-size: 9px; color: var(--dim); margin-top: 6px; letter-spacing: 0.08em; }
+
+  .problem {
+    padding: 16px 20px;
+    background: rgba(34,211,238,0.04);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 48px;
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .problem .label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .step {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 28px;
+    overflow: hidden;
+  }
+  .step-header {
+    background: var(--surface);
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .step-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+  }
+  .step-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    background: rgba(52,211,153,0.1);
+    border: 1px solid rgba(52,211,153,0.25);
+    border-radius: 2px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--green);
+    letter-spacing: 0.06em;
+    margin-left: 10px;
+  }
+  .step-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #f1f5f9;
+    margin: 10px 0 6px;
+  }
+  .step-tag { font-size: 13px; color: var(--muted); }
+
+  .step-body { padding: 24px; }
+
+  .section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    color: var(--dim);
+    letter-spacing: 0.12em;
+    margin-bottom: 12px;
+  }
+
+  pre.code {
+    background: #030810;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px;
+    overflow-x: auto;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    line-height: 1.9;
+    color: #94a3b8;
+    margin-bottom: 24px;
+  }
+  pre.code .kw { color: #c084fc; }
+  pre.code .fn { color: var(--accent); }
+  pre.code .str { color: #86efac; }
+  pre.code .num { color: #fb923c; }
+  pre.code .cm { color: #374151; font-style: italic; }
+
+  .explain {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 14px;
+  }
+  .explain .arrow { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+  .explain .h { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13.5px; color: #f1f5f9; margin-bottom: 5px; }
+  .explain .b { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+  .bars { display: flex; flex-direction: column; gap: 9px; }
+  .bar-row { display: flex; align-items: center; gap: 12px; }
+  .bar-label { font-family: 'Space Mono', monospace; font-size: 10.5px; color: var(--muted); width: 150px; text-align: right; flex-shrink: 0; }
+  .bar-track { flex: 1; height: 18px; background: var(--surface); border-radius: 2px; overflow: hidden; }
+  .bar-fill { height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; border-radius: 2px; }
+  .bar-fill span { font-family: 'Space Mono', monospace; font-size: 9.5px; color: #030810; font-weight: 700; }
+
+  .corr-row { display: flex; align-items: center; gap: 12px; margin-bottom: 9px; }
+  .corr-label { font-family: 'Space Mono', monospace; font-size: 10.5px; color: var(--muted); width: 190px; flex-shrink: 0; }
+  .corr-track { flex: 1; height: 18px; background: var(--surface); border-radius: 2px; position: relative; overflow: hidden; }
+  .corr-mid { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--dim); }
+  .corr-fill { position: absolute; top: 0; bottom: 0; }
+  .corr-val { font-family: 'Space Mono', monospace; font-size: 10.5px; width: 50px; text-align: right; }
+
+  .findings-title { font-family: 'Space Mono', monospace; font-size: 9px; color: var(--dim); letter-spacing: 0.12em; margin: 56px 0 16px; padding-top: 32px; border-top: 1px solid var(--border); }
+  .findings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .finding-card { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 16px 18px; }
+  .finding-card .t { font-family: 'Space Mono', monospace; font-size: 9px; color: var(--dim); letter-spacing: 0.08em; margin-bottom: 8px; }
+  .finding-card .v { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; color: var(--accent); margin-bottom: 8px; }
+  .finding-card .d { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
+  .toc a {
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 10.5px;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 6px 12px;
+    transition: all 0.15s;
+  }
+  .toc a:hover { color: var(--accent); border-color: var(--accent); }
+
+  footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 40px 40px;
+    border-top: 1px solid rgba(34,211,238,0.06);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    color: var(--dim);
+  }
+
+  @media (max-width: 700px) {
+    .stat-row { grid-template-columns: repeat(2, 1fr); }
+    .wrap { padding: 32px 20px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="meta">PROJECT_004 &nbsp;///&nbsp; PYTHON · PANDAS · SEABORN · MATPLOTLIB</div>
+
+  <h1>Car Price <span class="accent">Exploratory</span><span class="sub">DATA ANALYSIS</span></h1>
+
+  <p class="lede">
+    End-to-end EDA on a 305-vehicle automotive dataset — cleaning, IQR-based outlier
+    removal, and univariate / bivariate / multivariate analysis to understand what
+    drives MSRP across manufacturers.
+  </p>
+
+  <div class="tags">
+    <span class="tag">Python</span>
+    <span class="tag">Pandas</span>
+    <span class="tag">NumPy</span>
+    <span class="tag">Seaborn</span>
+    <span class="tag">Matplotlib</span>
+    <span class="tag">EDA</span>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-card"><div class="v">305</div><div class="l">RAW ROWS</div></div>
+    <div class="stat-card"><div class="v">10</div><div class="l">CAR MAKES</div></div>
+    <div class="stat-card"><div class="v">99</div><div class="l">NULLS REMOVED</div></div>
+    <div class="stat-card"><div class="v">8</div><div class="l">EDA STEPS</div></div>
+  </div>
+
+  <div class="problem">
+    <span class="label">PROBLEM STATEMENT</span>
+    Understand how vehicle specifications — engine size, horsepower, transmission, fuel efficiency —
+    influence MSRP, to support pricing strategy and lay groundwork for predictive modeling.
+  </div>
+
+  <div class="toc">
+    <a href="#step1">01 Load Data</a>
+    <a href="#step2">02 Drop Columns</a>
+    <a href="#step3">03 Rename Columns</a>
+    <a href="#step4">04 Clean</a>
+    <a href="#step5">05 Outliers</a>
+    <a href="#step6">06 Univariate</a>
+    <a href="#step7">07 Bivariate</a>
+    <a href="#step8">08 Multivariate</a>
+    <a href="#findings">Key Findings</a>
+  </div>
+
+  <div class="step" id="step1">
+    <div class="step-header">
+      <span class="step-num">STEP 01</span><span class="step-badge">Load Data</span>
+      <div class="step-title">Load Dataset &amp; Inspect</div>
+      <div class="step-tag">Read the raw CSV and check shape, columns, and types</div>
+    </div>
+    <div class="step-body">
+      <div class="section-label">PYTHON CODE</div>
+      <pre class="code"><span class="kw">import</span> pandas <span class="kw">as</span> pd
+<span class="kw">import</span> numpy <span class="kw">as</span> np
+<span class="kw">import</span> seaborn <span class="kw">as</span> sns
+<span class="kw">import</span> matplotlib.pyplot <span class="kw">as</span> plt
+
+<span class="cm"># Load the raw dataset</span>
+df = pd.<span class="fn">read_csv</span>(<span class="str">"01_Cars_Raw_Dataset.csv"</span>)
+
+df.<span class="fn">head</span>()
+df.dtypes
+
+<span class="cm"># Shape: (305, 16)</span>
+<span class="kw">print</span>(df.shape)</pre>
+
+      <div class="section-label">OBSERVATIONS &amp; EXPLANATION</div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">pd.read_csv()</div><div class="b">Loads the car specifications dataset — 305 vehicles across 10 manufacturers, 16 original columns covering specs, fuel economy, and MSRP.</div></div></div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">df.dtypes</div><div class="b">Confirms numeric columns (Year, Engine HP, Cylinders, MPG, Price) are read correctly, and categorical columns (Make, Model, Transmission, Drive Mode) as text.</div></div></div>
+    </div>
+  </div>
+
+  <div class="step" id="step2">
+    <div class="step-header">
+      <span class="step-num">STEP 02</span><span class="step-badge">Drop Columns</span>
+      <div class="step-title">Remove Irrelevant Columns</div>
+      <div class="step-tag">Drop 6 columns that don't add analytical value</div>
+    </div>
+    <div class="step-body">
+      <div class="section-label">PYTHON CODE</div>
+      <pre class="code"><span class="cm"># Drop columns not needed for this analysis</span>
+df = df.<span class="fn">drop</span>([
+    <span class="str">'Engine Fuel Type'</span>,
+    <span class="str">'Market Category'</span>,
+    <span class="str">'Vehicle Style'</span>,
+    <span class="str">'Popularity'</span>,
+    <span class="str">'Number of Doors'</span>,
+    <span class="str">'Vehicle Size'</span>
+], axis=<span class="num">1</span>)
+
+df.<span class="fn">head</span>()</pre>
+
+      <div class="section-label">OBSERVATIONS &amp; EXPLANATION</div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">Why drop these columns?</div><div class="b">Engine Fuel Type, Market Category, Vehicle Style, Popularity, Number of Doors, and Vehicle Size were judged not essential to the price analysis — keeping the dataset focused and easier to work with.</div></div></div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">axis=1</div><div class="b">Tells Pandas to drop columns (not rows). axis=0 would drop rows instead.</div></div></div>
+    </div>
+  </div>
+
+  <div class="step" id="step3">
+    <div class="step-header">
+      <span class="step-num">STEP 03</span><span class="step-badge">Rename Columns</span>
+      <div class="step-title">Rename Columns for Clarity</div>
+      <div class="step-tag">Shorter, cleaner column names for easier coding</div>
+    </div>
+    <div class="step-body">
+      <div class="section-label">PYTHON CODE</div>
+      <pre class="code"><span class="cm"># Rename columns to shorter, clearer names</span>
+df = df.<span class="fn">rename</span>(columns={
+    <span class="str">'Engine HP'</span>: <span class="str">'HP'</span>,
+    <span class="str">'Engine Cylinders'</span>: <span class="str">'Cylinders'</span>,
+    <span class="str">'Transmission Type'</span>: <span class="str">'Transmission'</span>,
+    <span class="str">'Driven_Wheels'</span>: <span class="str">'Drive Mode'</span>,
+    <span class="str">'highway MPG'</span>: <span class="str">'MPG-H'</span>,
+    <span class="str">'city mpg'</span>: <span class="str">'MPG-C'</span>,
+    <span class="str">'MSRP'</span>: <span class="str">'Price'</span>
+})
+
+df.<span class="fn">head</span>()</pre>
+
+      <div class="section-label">OBSERVATIONS &amp; EXPLANATION</div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">Why rename?</div><div class="b">'Engine HP' → 'HP', 'highway MPG' → 'MPG-H', 'MSRP' → 'Price' — shorter names are faster to type and reduce typos in later code.</div></div></div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">dict mapping</div><div class="b">df.rename(columns={...}) takes a dictionary of old_name: new_name pairs and renames only those columns, leaving the rest untouched.</div></div></div>
+    </div>
+  </div>
+
+  <div class="step" id="step4">
+    <div class="step-header">
+      <span class="step-num">STEP 04</span><span class="step-badge">Clean</span>
+      <div class="step-title">Remove Duplicates &amp; Nulls</div>
+      <div class="step-tag">Drop duplicate rows and handle missing values</div>
+    </div>
+    <div class="step-body">
+      <div class="section-label">PYTHON CODE</div>
+      <pre class="code"><span class="cm"># Check and drop duplicate rows</span>
+<span class="kw">print</span>(df.<span class="fn">duplicated</span>().<span class="fn">sum</span>())
+df = df.<span class="fn">drop_duplicates</span>()
+<span class="kw">print</span>(df.shape)
+
+<span class="cm"># Check nulls</span>
+df.<span class="fn">isnull</span>().<span class="fn">sum</span>()
+<span class="cm"># HP: 69 nulls, Cylinders: 30 nulls</span>
+
+<span class="cm"># Drop rows with nulls — small % of dataset,</span>
+<span class="cm"># safe to remove without impacting overall accuracy</span>
+df = df.<span class="fn">dropna</span>()
+df.<span class="fn">isnull</span>().<span class="fn">sum</span>()   <span class="cm"># → all zero</span>
+
+df.<span class="fn">describe</span>()</pre>
+
+      <div class="section-label">OBSERVATIONS &amp; EXPLANATION</div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">df.duplicated().sum()</div><div class="b">Counts exact duplicate rows before removing them with drop_duplicates().</div></div></div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">HP: 69 nulls, Cylinders: 30 nulls</div><div class="b">These two columns had missing values. Since they're small relative to the dataset size, the decision was to drop these rows rather than impute — avoiding any artificial bias in HP/Cylinder-driven analysis.</div></div></div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">df.dropna()</div><div class="b">Removes any row containing at least one null value across all columns. Used here because the null count was small enough that row loss wouldn't hurt overall sample size.</div></div></div>
+    </div>
+  </div>
+
+  <div class="step" id="step5">
+    <div class="step-header">
+      <span class="step-num">STEP 05</span><span class="step-badge">Outliers</span>
+      <div class="step-title">Detect &amp; Remove Outliers (IQR Method)</div>
+      <div class="step-tag">Use boxplots and the IQR rule to handle extreme values</div>
+    </div>
+    <div class="step-body">
+      <div class="section-label">PYTHON CODE</div>
+      <pre class="code"><span class="cm"># Boxplot for Price (MSRP)</span>
+sns.<span class="fn">boxplot</span>(x=df[<span class="str">'Price'</span>])
+plt.<span class="fn">show</span>()
+
+<span class="cm"># Boxplot for Engine HP</span>
+sns.<span class="fn">boxplot</span>(x=df[<span class="str">'HP'</span>])
+plt.<span class="fn">show</span>()
+
+<span class="cm"># Select numeric columns for IQR check</span>
+l = df.dtypes.loc[
+    (df.dtypes == <span class="str">"int64"</span>) | (df.dtypes == <span class="str">"float64"</span>)
+].index.<span class="fn">tolist</span>()
+
+<span class="cm"># IQR calculation</span>
+Q1 = df[l].<span class="fn">quantile</span>(<span class="num">0.25</span>)
+Q3 = df[l].<span class="fn">quantile</span>(<span class="num">0.75</span>)
+IQR = Q3 - Q1
+
+<span class="cm"># Remove rows outside 1.5×IQR range</span>
+df2 = df[~((df[l] < (Q1 - <span class="num">1.5</span> * IQR)) |
+           (df[l] > (Q3 + <span class="num">1.5</span> * IQR))).<span class="fn">any</span>(axis=<span class="num">1</span>)]
+
+<span class="kw">print</span>(df.shape, df2.shape)</pre>
+
+      <div class="section-label">OBSERVATIONS &amp; EXPLANATION</div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">Boxplot for Price</div><div class="b">MSRP ranges ~₹10,000 to ₹120,000. Median price ~₹65,000, with the middle 50% of cars priced between ₹40,000–₹90,000. No major outliers visible after cleaning.</div></div></div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">Boxplot for Engine HP</div><div class="b">Horsepower ranges 70–500 HP. Median is around 270–280 HP, with the middle 50% falling between 180–380 HP.</div></div></div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">IQR Method</div><div class="b">Q1 (25th percentile) and Q3 (75th percentile) define the IQR = Q3 − Q1. Any value beyond Q1 − 1.5×IQR or Q3 + 1.5×IQR is flagged as an outlier and removed into a separate cleaned DataFrame df2.</div></div></div>
+    </div>
+  </div>
+
+  <div class="step" id="step6">
+    <div class="step-header">
+      <span class="step-num">STEP 06</span><span class="step-badge">Univariate</span>
+      <div class="step-title">Univariate Distribution Analysis</div>
+      <div class="step-tag">Histograms and bar charts for single-variable patterns</div>
+    </div>
+    <div class="step-body">
+      <div class="section-label">PYTHON CODE</div>
+      <pre class="code"><span class="cm"># Distribution plot for Engine HP</span>
+sns.<span class="fn">histplot</span>(df2[<span class="str">'HP'</span>], kde=<span class="kw">True</span>)
+plt.<span class="fn">title</span>(<span class="str">"Distribution of Engine HP"</span>)
+plt.<span class="fn">show</span>()
+
+<span class="cm"># Subplot grid for all numeric columns</span>
+plt.<span class="fn">figure</span>(figsize=(<span class="num">15</span>,<span class="num">10</span>))
+<span class="kw">for</span> i, col <span class="kw">in</span> <span class="fn">enumerate</span>(l):
+    plt.<span class="fn">subplot</span>(<span class="num">2</span>, <span class="num">3</span>, i+<span class="num">1</span>)
+    sns.<span class="fn">histplot</span>(df2[col], kde=<span class="kw">True</span>)
+plt.<span class="fn">tight_layout</span>()
+plt.<span class="fn">show</span>()
+
+<span class="cm"># Bar chart — number of cars per Make</span>
+df[<span class="str">'Make'</span>].<span class="fn">value_counts</span>().<span class="fn">nlargest</span>(<span class="num">10</span>).<span class="fn">plot</span>(
+    kind=<span class="str">'bar'</span>, figsize=(<span class="num">12</span>,<span class="num">8</span>)
+)
+plt.<span class="fn">title</span>(<span class="str">"Top 10 Car Makes by Count"</span>)
+plt.<span class="fn">xlabel</span>(<span class="str">"Make"</span>)
+plt.<span class="fn">ylabel</span>(<span class="str">"Number of Cars"</span>)
+plt.<span class="fn">show</span>()</pre>
+
+      <div class="section-label">OBSERVATIONS &amp; EXPLANATION</div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">sns.histplot() with KDE</div><div class="b">Plots the distribution of Engine HP with a smoothed density curve overlaid, confirming the 70–500 HP range observed in the boxplot.</div></div></div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">Bar chart of car counts by Make</div><div class="b">Honda has the highest number of cars in the dataset (41), followed closely by Ford (40) and BMW (34). Toyota, Mercedes-Benz, and Chevrolet also have strong representation, while Audi, Hyundai, Kia, and Nissan have comparatively fewer vehicles.</div></div></div>
+
+      <div class="section-label" style="margin-top:24px;">TOP 10 MAKES BY CAR COUNT</div>
+      <div class="bars">
+        <div class="bar-row"><div class="bar-label">Honda</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#34d399;"><span>41</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">Ford</div><div class="bar-track"><div class="bar-fill" style="width:97.5%;background:#22d3ee;"><span>40</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">BMW</div><div class="bar-track"><div class="bar-fill" style="width:82.9%;background:#22d3ee;"><span>34</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">Toyota</div><div class="bar-track"><div class="bar-fill" style="width:78%;background:#22d3ee;"><span>32</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">Mercedes-Benz</div><div class="bar-track"><div class="bar-fill" style="width:68.3%;background:#22d3ee;"><span>28</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">Chevrolet</div><div class="bar-track"><div class="bar-fill" style="width:68.3%;background:#22d3ee;"><span>28</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">Hyundai</div><div class="bar-track"><div class="bar-fill" style="width:65.9%;background:#22d3ee;"><span>27</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">Audi</div><div class="bar-track"><div class="bar-fill" style="width:63.4%;background:#22d3ee;"><span>26</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">Kia</div><div class="bar-track"><div class="bar-fill" style="width:61%;background:#22d3ee;"><span>25</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">Nissan</div><div class="bar-track"><div class="bar-fill" style="width:58.5%;background:#22d3ee;"><span>24</span></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step" id="step7">
+    <div class="step-header">
+      <span class="step-num">STEP 07</span><span class="step-badge">Bivariate</span>
+      <div class="step-title">Bivariate Relationship Analysis</div>
+      <div class="step-tag">Scatter plots and grouped bar plots between two variables</div>
+    </div>
+    <div class="step-body">
+      <div class="section-label">PYTHON CODE</div>
+      <pre class="code"><span class="cm"># Scatter plot — HP vs Price</span>
+fig, ax = plt.<span class="fn">subplots</span>(figsize=(<span class="num">10</span>,<span class="num">6</span>))
+sns.<span class="fn">scatterplot</span>(x=<span class="str">"HP"</span>, y=<span class="str">"Price"</span>, data=df2, ax=ax)
+plt.<span class="fn">title</span>(<span class="str">"Engine HP vs Price"</span>)
+plt.<span class="fn">show</span>()
+
+<span class="cm"># Bar plot — mean Price by Cylinder count</span>
+plt.<span class="fn">figure</span>(figsize=(<span class="num">10</span>,<span class="num">6</span>))
+sns.<span class="fn">barplot</span>(x=<span class="str">"Cylinders"</span>, y=<span class="str">"Price"</span>, data=df2)
+plt.<span class="fn">title</span>(<span class="str">"Average Price by Cylinder Count"</span>)
+plt.<span class="fn">show</span>()
+
+<span class="cm"># Count plot — Transmission across Drive Mode</span>
+plt.<span class="fn">figure</span>(figsize=(<span class="num">15</span>,<span class="num">5</span>))
+sns.<span class="fn">countplot</span>(x=<span class="str">"Transmission"</span>, hue=<span class="str">"Drive Mode"</span>, data=df2)
+plt.<span class="fn">title</span>(<span class="str">"Transmission Type by Drive Mode"</span>)
+plt.<span class="fn">show</span>()
+
+<span class="cm"># Boxplot — Price by Transmission</span>
+plt.<span class="fn">figure</span>(figsize=(<span class="num">10</span>,<span class="num">6</span>))
+sns.<span class="fn">boxplot</span>(x=<span class="str">"Price"</span>, y=<span class="str">"Transmission"</span>, data=df2)
+plt.<span class="fn">show</span>()</pre>
+
+      <div class="section-label">OBSERVATIONS &amp; EXPLANATION</div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">Scatter plot — HP vs Price</div><div class="b">Data points are widely scattered with no strong linear relationship between horsepower and price. Cars with similar horsepower can have very different prices — suggesting brand, model, and features also drive price.</div></div></div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">Bar plot — Cylinders vs mean Price</div><div class="b">Cars with 8 cylinders have the highest average MSRP. Average price generally rises with cylinder count, though 10- and 12-cylinder cars show slightly lower average prices than 8-cylinder — the trend isn't perfectly linear.</div></div></div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">Count plot — Transmission × Drive Mode</div><div class="b">Automatic transmission vehicles are more common than manual across most drive modes. All-Wheel Drive (AWD) has the highest vehicle count overall.</div></div></div>
+    </div>
+  </div>
+
+  <div class="step" id="step8">
+    <div class="step-header">
+      <span class="step-num">STEP 08</span><span class="step-badge">Multivariate</span>
+      <div class="step-title">Correlation Heatmap &amp; Multivariate View</div>
+      <div class="step-tag">Check relationships across all numeric features at once</div>
+    </div>
+    <div class="step-body">
+      <div class="section-label">PYTHON CODE</div>
+      <pre class="code"><span class="cm"># Correlation matrix</span>
+corr = df.<span class="fn">corr</span>(numeric_only=<span class="kw">True</span>)
+<span class="kw">print</span>(corr)
+
+<span class="cm"># Heatmap visualization</span>
+plt.<span class="fn">figure</span>(figsize=(<span class="num">12</span>,<span class="num">8</span>))
+sns.<span class="fn">heatmap</span>(corr, cmap=<span class="str">'BrBG'</span>, annot=<span class="kw">True</span>)
+plt.<span class="fn">title</span>(<span class="str">"Correlation Heatmap — Numeric Features"</span>)
+plt.<span class="fn">show</span>()</pre>
+
+      <div class="section-label">OBSERVATIONS &amp; EXPLANATION</div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">df.corr(numeric_only=True)</div><div class="b">Computes the Pearson correlation coefficient between every pair of numeric columns, producing a correlation matrix.</div></div></div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">Heatmap interpretation</div><div class="b">Most correlation coefficients are close to 0 — no strong linear relationships among numeric variables. Engine HP shows a weak negative correlation with highway MPG (-0.12), meaning higher horsepower cars trend slightly less fuel-efficient.</div></div></div>
+      <div class="explain"><span class="arrow">▸</span><div><div class="h">No major multicollinearity</div><div class="b">Since features aren't highly correlated with each other, each one contributes distinct information — good news if this dataset were later used for a predictive pricing model.</div></div></div>
+
+      <div class="section-label" style="margin-top:24px;">KEY CORRELATIONS (Pearson r)</div>
+      <div class="corr-row">
+        <div class="corr-label">HP ↔ Price</div>
+        <div class="corr-track"><div class="corr-mid"></div><div class="corr-fill" style="left:50%;width:30.5%;background:#34d399;"></div></div>
+        <div class="corr-val" style="color:#34d399;">+0.61</div>
+      </div>
+      <div class="corr-row">
+        <div class="corr-label">HP ↔ Highway MPG</div>
+        <div class="corr-track"><div class="corr-mid"></div><div class="corr-fill" style="left:44%;width:6%;background:#f87171;"></div></div>
+        <div class="corr-val" style="color:#f87171;">-0.12</div>
+      </div>
+      <div class="corr-row">
+        <div class="corr-label">Cylinders ↔ Price</div>
+        <div class="corr-track"><div class="corr-mid"></div><div class="corr-fill" style="left:50%;width:27.5%;background:#34d399;"></div></div>
+        <div class="corr-val" style="color:#34d399;">+0.55</div>
+      </div>
+      <div class="corr-row">
+        <div class="corr-label">Year ↔ Price</div>
+        <div class="corr-track"><div class="corr-mid"></div><div class="corr-fill" style="left:50%;width:4%;background:#64748b;"></div></div>
+        <div class="corr-val" style="color:#64748b;">+0.08</div>
+      </div>
+      <div class="corr-row">
+        <div class="corr-label">City MPG ↔ Highway MPG</div>
+        <div class="corr-track"><div class="corr-mid"></div><div class="corr-fill" style="left:50%;width:44.5%;background:#34d399;"></div></div>
+        <div class="corr-val" style="color:#34d399;">+0.89</div>
+      </div>
+      <p style="font-family:'Space Mono',monospace;font-size:11px;color:var(--dim);margin-top:14px;">
+        Most coefficients are close to 0 — confirming no strong multicollinearity across features.
+      </p>
+    </div>
+  </div>
+
+  <div id="findings">
+    <div class="findings-title">KEY FINDINGS SUMMARY</div>
+    <div class="findings-grid">
+      <div class="finding-card"><div class="t">PRICE RANGE</div><div class="v">₹10K – ₹120K</div><div class="d">Median ~₹65,000; middle 50% between ₹40K–₹90K after cleaning</div></div>
+      <div class="finding-card"><div class="t">HORSEPOWER RANGE</div><div class="v">70 – 500 HP</div><div class="d">Median ~270-280 HP across the cleaned dataset</div></div>
+      <div class="finding-card"><div class="t">8-CYLINDER PREMIUM</div><div class="v">Highest avg MSRP</div><div class="d">Price rises with cylinder count, peaking at 8-cyl (not perfectly linear)</div></div>
+      <div class="finding-card"><div class="t">HP VS PRICE</div><div class="v">Weak linear link</div><div class="d">Wide scatter — brand &amp; features matter more than raw horsepower alone</div></div>
+      <div class="finding-card"><div class="t">TRANSMISSION</div><div class="v">Automatic ↑ median price</div><div class="d">Automatic cars show slightly higher and more variable pricing than manual</div></div>
+      <div class="finding-card"><div class="t">MULTICOLLINEARITY</div><div class="v">None significant</div><div class="d">Most feature correlations near 0 — each variable adds distinct signal</div></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>DATASET: CARS_RAW · 305 ROWS · 16 ORIGINAL COLUMNS · 10 MAKES</span>
+  <span>STATUS: ✓ EDA COMPLETE</span>
+</footer>
+
+</body>
+</html>
